@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
 
-export async function GET(request: NextRequest | null) {
+export async function GET(request: NextRequest) {
   // const scouter = await prisma.scouter.create({
   //   data: {
   //     name: "John Doe",
@@ -22,4 +22,4 @@ export async function GET(request: NextRequest | null) {
   return NextResponse.json(scouter);
 }
 
-GET(null);
+// GET(null);
