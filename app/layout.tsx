@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import "@fontsource-variable/orbitron";
+import "@fontsource-variable/chivo";
+import Navbar from "@/components/navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -44,7 +44,10 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className="w-screen min-h-screen flex flex-col">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
